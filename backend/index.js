@@ -8,7 +8,10 @@ import Todo from './models/todoModel.js'
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: "https://your-frontend-url.onrender.com",
+    credentials: true,
+  }));
 app.use(express.json());
 
 
