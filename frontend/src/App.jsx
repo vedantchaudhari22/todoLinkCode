@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const getTodos = async () => {
-    const res = await axios.get("http://localhost:5000/todos");
+    const res = await axios.get("http://localhost:5000/gettodos");
     setTodos(res.data.todos);
   };
 
