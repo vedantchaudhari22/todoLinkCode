@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const getTodos = async () => {
-    const res = await axios.get("https://todo-link-code-backend.vercel.app/gettodos");
+    const res = await axios.get("http://localhost:5000/gettodos");
     setTodos(res.data.todos);
   };
 
@@ -14,7 +14,7 @@ function App() {
   const addTodo = async () => {
     if (!title.trim()) return;
 
-    await axios.post("https://todo-link-code-backend.vercel.app/todos", { title });
+    await axios.post("http://localhost:5000/todos", { title });
     setTitle("");
     getTodos(); 
   };
