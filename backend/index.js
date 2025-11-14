@@ -35,4 +35,8 @@ app.get("/todos", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch todos" });
   }
 });
+
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
 app.listen(process.env.PORT || 3000, () => console.log('Server is listening on port 5000'));
