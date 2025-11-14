@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://your-frontend-url.onrender.com",
+    origin: "https://todo-frontend-pwix.onrender.com",
     credentials: true,
   }));
 app.use(express.json());
