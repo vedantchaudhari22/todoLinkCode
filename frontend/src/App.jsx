@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const getTodos = async () => {
-    const res = await axios.get("http://localhost:5000/todos");
+    const res = await axios.get("https://todo-backend-5p88.onrender.com/todos");
     setTodos(res.data.todos);
   };
 
@@ -14,7 +14,7 @@ function App() {
   const addTodo = async () => {
     if (!title.trim()) return;
 
-    await axios.post("http://localhost:5000/todos", { title });
+    await axios.post("https://todo-backend-5p88.onrender.com/todos", { title });
     setTitle("");
     getTodos(); 
   };
