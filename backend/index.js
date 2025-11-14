@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "http://localhost:5173/",
+    origin: "http://localhost:5173",
     credentials: true,
   }));
 app.use(express.json());
@@ -30,7 +30,7 @@ app.post("/todos", async (req, res) => {
 });
 
 
-app.get("/todos", async (req, res) => {
+app.get("/gettodos", async (req, res) => {
   try {
     const todos = await Todo.find();
     res.json({ todos });
